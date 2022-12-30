@@ -1,0 +1,84 @@
+﻿
+@model Employee
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-11">
+			<h5>Create Team Section Employee</h5>
+			<form class="user" method="post" >
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<input asp-for="Name" type="text" class="form-control form-control-user"
+							   placeholder="First Name">
+						<span asp-validation-for="Name"></span>
+					</div>
+					<div class="col-sm-6">
+						<input asp-for="Surname" type="text" class="form-control form-control-user"
+							   placeholder="Last Name">
+						<span asp-validation-for="Surname"></span>
+
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6">
+						<input asp-for="Position" type="text" class="form-control form-control-user"
+							   placeholder="Position">
+						<span asp-validation-for="Position"></span>
+
+					</div>
+					<div class="col-sm-6">
+						<input asp-for="Image" type="text" class="form-control form-control-user"
+							   placeholder="Image name">
+						<span asp-validation-for="Image"></span>
+
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<input asp-for="Twitter" type="url" class="form-control form-control-user"
+							   id="exampleInputPassword" placeholder="Twitter">
+						<span asp-validation-for="Twitter"></span>
+
+					</div>
+					<div class="col-sm-6">
+						
+						<input asp-for="Facebook" type="url" class="form-control form-control-user"
+							   id="exampleRepeatPassword" placeholder="Facebook">
+						<span asp-validation-for="Facebook"></span>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6">
+						
+						<input asp-for="Instagram" type="url" class="form-control form-control-user"
+							   id="exampleRepeatPassword" placeholder="Instagram">
+						<span asp-validation-for="Instagram"></span>
+
+					</div>
+					<div class="col-sm-6">
+						<input asp-for="Linkedin" type="url" class="form-control form-control-user"
+							   id="exampleRepeatPassword" placeholder="LinkedIn">
+						<span asp-validation-for="Linkedin"></span>
+
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+
+					<div class="col-lg-5 col-sm-12 col-md-10 ">
+
+						<button type="submit" class="btn btn-primary btn-user btn-block">
+							Create
+						</button>
+						<hr>
+						<a asp-action="Index" asp-controller="Team" class="btn btn-google btn-user btn-block">
+							Cancel
+						</a>
+					</div>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
+

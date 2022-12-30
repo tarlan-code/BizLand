@@ -1,0 +1,52 @@
+﻿@model List<Service>
+<div class="container-fluid">
+
+
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Services Section</h6>
+
+			@if (Model.Count < 4)
+			{
+				<a class="btn btn-success" asp-area="Manage" asp-controller="Service" asp-action="Create">Add service</a>
+
+			}
+			else
+			{
+				<p>Maximum 4 employees may</p>
+			}
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Title</th>
+							<th>Icon</th>
+							<th>Update</th>
+							<th>Delete</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (Service se in Model)
+						{
+							<tr>
+								<td>@se.Name</td>
+								<td>@se.Title</td>
+								<td>@se.Icon</td>
+								<td><a class="btn btn-warning" asp-area="Manage" asp-controller="Service" asp-action="Update" asp-route-id="@se.Id">Update</a></td>
+								<td><a class="btn btn-danger" asp-area="Manage" asp-controller="Service" asp-action="Delete" asp-route-id="@se.Id">Delete</a></td>
+							</tr>
+						}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+

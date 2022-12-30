@@ -1,0 +1,59 @@
+﻿@model Tophero
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-11">
+			<h5>Update Team Section Employee</h5>
+			<form class="user" method="post">
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<label asp-for="Title"></label>
+						<input asp-for="Title" type="text" class="form-control form-control-user"
+							   placeholder="Title">
+						<span asp-validation-for="Title"></span>
+					</div>
+					<div class="col-sm-6">
+						<label>Get started button:</label>
+						<select class="form-select" asp-for="GetStartedUrl"  aria-label="Default select example">
+							<option selected value="about">About</option>
+							<option value="hero">Home</option>
+							<option value="services">Service</option>
+							<option value="portfolio">Portfolio</option>
+							<option value="team">Tema</option>
+							<option value="contact">Contact</option>
+							<option value="empty">Empty</option>
+						</select>
+						
+						<span asp-validation-for="GetStartedUrl"></span>
+
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-12">
+						<label asp-for="VideoUrl"></label>
+						<input asp-for="VideoUrl" type="text" class="form-control form-control-user"
+							   placeholder="VideoUrl">
+						<span asp-validation-for="VideoUrl"></span>
+
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+
+					<div class="col-lg-5 col-sm-12 col-md-10 ">
+
+						<button type="submit" class="btn btn-success btn-user btn-block">
+							Update
+						</button>
+						<hr>
+						<a asp-action="Index" asp-controller="Team" class="btn btn-google btn-user btn-block">
+							Cancel
+						</a>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
